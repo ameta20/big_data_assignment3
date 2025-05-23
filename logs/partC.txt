@@ -50,3 +50,104 @@ Configuration: {'input_path': '/home/users/ameta/big_data_assignment1/Wikipedia-
 Loading and parsing data...
 Parsed 41784 documents in 5.13s
 Tokenizing using 'nlp'...
+Tokenized 41262 documents (after filtering empty ones) in 401.63s
+Calculating TF-IDF...
+Selected top 20000 terms for vocabulary.
+TF-IDF calculation and vector creation took 41.49s
+Computing SVD with k=250...
+SVD computation took 2283.44s
+U matrix (RowMatrix): 41262 rows (docs), 250 cols (concepts)
+s vector (local): 250 singular values
+V matrix (local): 20000 rows (terms), 250 cols (concepts)
+
+Total LSA pipeline (build) time: 2738.61s
+
+--- Part (c) Search Engine Queries ---
+
+Query: '"algebra"'
+Top 10 results (found in 14.060s):
+  1. Vertex (Score: 0.2823)
+  2. Subspace (Score: 0.1933)
+  3. Function (Score: 0.1502)
+  4. List of zeta functions (Score: 0.1448)
+  5. Modulo (Score: 0.1441)
+  6. Partition function (Score: 0.1359)
+  7. Quanta (Score: 0.1356)
+  8. Regular graph (Score: 0.1160)
+  9. Matrix (Score: 0.1155)
+  10. Ring (Score: 0.1142)
+
+Query: '"war"'
+Top 10 results (found in 7.392s):
+  1. 1939 (Score: 0.2730)
+  2. 1944 (Score: 0.2730)
+  3. 1945 (Score: 0.2730)
+  4. 1942 (Score: 0.2730)
+  5. 1943 (Score: 0.2730)
+  6. 1940 (Score: 0.2730)
+  7. 1941 (Score: 0.1694)
+  8. 1918 (Score: 0.1675)
+  9. 1917 (Score: 0.1675)
+  10. 1916 (Score: 0.1675)
+
+Query: '"century"'
+Top 10 results (found in 7.244s):
+  1. 19th century BC (Score: 0.7763)
+  2. 1440s BC (Score: 0.6820)
+  3. 25th century BC (Score: 0.6261)
+  4. 22nd century BC (Score: 0.6261)
+  5. 23rd century BC (Score: 0.6261)
+  6. 26th century BC (Score: 0.6261)
+  7. 27th century BC (Score: 0.6261)
+  8. 28th century BC (Score: 0.6261)
+  9. 15th century BC (Score: 0.4797)
+  10. 16th century BC (Score: 0.4797)
+
+Query: '"philosophy"'
+Top 10 results (found in 7.167s):
+  1. Index of painting-related articles (Score: 0.0417)
+  2. Deduction (Score: 0.0324)
+  3. Deduction and induction (Score: 0.0295)
+  4. Normalized frequency (Score: 0.0283)
+  5. Steer (Score: 0.0267)
+  6. Quanta (Score: 0.0259)
+  7. Index of philosophy articles (A–C) (Score: 0.0259)
+  8. Index (Score: 0.0249)
+  9. Impedance mismatch (Score: 0.0235)
+  10. Relativity (Score: 0.0228)
+
+Query: '"pollution"'
+Top 10 results (found in 7.086s):
+  1. Transport in the Cook Islands (Score: 0.0151)
+  2. Penguin Island (Score: 0.0140)
+  3. IMO (Score: 0.0130)
+  4. Antigua (disambiguation) (Score: 0.0126)
+  5. Transport in French Polynesia (Score: 0.0115)
+  6. Transport in Guadeloupe (Score: 0.0113)
+  7. Transport in the British Virgin Islands (Score: 0.0110)
+  8. Cell (Score: 0.0108)
+  9. K cell (Score: 0.0108)
+  10. Transport in Nicaragua (Score: 0.0102)
+
+Query: '"university"'
+Top 10 results (found in 7.435s):
+  1. École Polytechnique Fédérale de Lausanne (Score: 0.1751)
+  2. PHD (Score: 0.1320)
+  3. Steer (Score: 0.0502)
+  4. University of Lausanne (Score: 0.0484)
+  5. Lists of universities and colleges (Score: 0.0473)
+  6. List of anthropologists (Score: 0.0401)
+  7. List of illustrators (Score: 0.0398)
+  8. List of colleges and universities in California (Score: 0.0396)
+  9. List of poets (Score: 0.0383)
+  10. List of science fiction themes (Score: 0.0321)
+
+--- Run Summary ---
+Final Configuration Used:
+  Tokenizer: nlp
+  Num Frequent Terms: 20000
+  K for SVD: 250
+  Sample Fraction: 1.0
+Total LSA Pipeline Build Time: 2738.61 seconds
+Search queries processed: "algebra" "war" "century" "philosophy" "pollution" "university"
+Stopping Spark session.
